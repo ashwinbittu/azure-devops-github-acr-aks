@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: app1nginxaks 
+  name: trackerapp 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app1nginxaks
+      app: trackerapp
   template:
     metadata:
       labels:
-        app: app1nginxaks 
+        app: trackerapp 
     spec:
       containers:
-        - name: app1nginxaks 
-          image: aksdevopsacr.azurecr.io/app1nginxaks
+        - name: trackerapp 
+          image: trackerappacrrepo.azurecr.io/trackerapp
           ports:
           - containerPort: 80
